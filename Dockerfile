@@ -12,5 +12,8 @@ COPY . /src
 # set it as a working directory
 WORKDIR /src
 
+# set python bufferring to false
+ENV PYTHONUNBUFFERED 0
+
 # execute the command to run the program
-CMD ["python", "-u", "Test.py"]
+CMD ["python", "Test.py"]
