@@ -19,8 +19,10 @@ docker build -t yelp .
 and running the image
 
 ```
-docker run yelp
+docker run -v /<data-path>/yelp_dataset_challenge_academic_dataset:/src/data yelp
 ```
+A quick note, we load systems local folder as the data source and tell the container where
+to find the data. Look [here](https://docs.docker.com/engine/tutorials/dockervolumes/) for mounting Docker volumes.
 
 ## Potential Tasks
 
