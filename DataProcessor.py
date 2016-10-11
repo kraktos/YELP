@@ -2,8 +2,6 @@
 pre-process all data formats
 """
 import pandas as pd
-import mmap
-import json
 
 
 def json_to_dataframe(json_object):
@@ -13,21 +11,6 @@ def json_to_dataframe(json_object):
     # # read the entire file into a python array
     with open(json_object, 'rb') as f:
         data = f.readlines()
-
-    # data_json_str = []
-
-    # with open(json_object, 'rb') as f:
-    #     # Size 0 will read the ENTIRE file into memory!
-    #     m = mmap.mmap(f.fileno(), 0, access=mmap.PROT_READ)  # File is open read-only
-    #
-    #     # Proceed with your code here -- note the file is already in memory
-    #     # so "readine" here will be as fast as could be
-    #     data = m.readline()
-    #     while data:
-    #         # remove the trailing "\n" from each line
-    #         # data = map(lambda x: x.rstrip(), data)
-    #         data_json_str.append(json.loads(data))
-    #         data = m.readline()
 
     # remove the trailing "\n" from each line
     data = map(lambda x: x.rstrip(), data)
