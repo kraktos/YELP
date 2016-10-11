@@ -13,4 +13,4 @@ COPY . /src
 WORKDIR /src
 
 # execute the command to run the program
-CMD ["python", "Test.py"]
+CMD ["python", "-u", "Test.py"]
