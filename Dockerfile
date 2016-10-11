@@ -4,7 +4,7 @@ FROM python:2.7
 
 # install dependencies
 RUN pip install --no-cache-dir pandas
-RUN pip install --no-cache-dir simplejson
+RUN pip install --no-cache-dir nltk
 
 # copy all to a directory
 COPY . /src
@@ -16,4 +16,4 @@ WORKDIR /src
 ENV PYTHONUNBUFFERED 0
 
 # execute the command to run the program
-CMD ["python", "Test.py"]
+CMD ["python", "Main.py"]
